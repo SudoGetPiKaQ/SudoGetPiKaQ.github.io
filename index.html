@@ -1,69 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Love</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        body{
-            background: #f9e9cd;
-        }
-        .box{
-            width: 120px;
-            height: 120px;
-            background: #ee3f4d;
-            transform: rotate(45deg) scale(0.85);
-            margin: 200px auto;
-            animation: love 1s infinite;
-            box-shadow: 0 0 30px 5px rgba(255, 0, 0, 0.7);
-        }
+	<meta charset="UTF-8">
+	<title>心心</title>
 
-        .box::before,
-        .box::after{
-            content: "";
-            position: absolute;
-            width: 120px;
-            height: 120px;
-            background: #ee3f4d;
-            border-radius: 50%;
-        }
-        .box::before{
-            left: -68px;
-        }
+	<link href="favicon.ico" rel="shortcut icon" class="icon-love" type="images/x-ico">
 
-        .box::after{
-            top:-68px;
-        }
+	<link rel="stylesheet" href="css/love.css">
 
-        @keyframes love{
-            0%{
-                transform: rotate(45deg) scale(0.85);
-            }
-            50%{
-                transform: rotate(45deg) scale(1)
-            }
-            100%{
-                transform: rotate(45deg) scale(1);
-            }
-        }
-        
-    .text{
-        color: #63071c;
-        font-size: 30px;
-        font-family: 'Courier New', Courier, monospace;
-        align-items: center;
-        text-align: center;
-    }
-    
-    </style>
+	<style>
+		@import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
+
+		body {
+			background: #f9e9cd;
+			font-family: "Open Sans", sans-serif;
+			font-weight: 600;
+			height: 100vh;
+			margin: 0;
+			font-size: 50px;
+			display: flex;
+			align-items: center;
+			-webkit-perspective: 500px;
+			perspective: 500px;
+		}
+
+		#rot {
+			margin: auto;
+			transform: rotateY(-20deg);
+			animation: anim 10s linear infinite;
+		}
+
+		p {
+			padding: 0 50px;
+			margin: 0;
+			color: #fff;
+		}
+
+		.yellow {
+			color: #EFC371;
+		}
+
+		.violet {
+			color: #8E94C0;
+		}
+
+		.fff {
+			color: #fff;
+		}
+
+		.green {
+			color: #5A9462;
+		}
+
+		.red {
+			color: #DD8339;
+		}
+
+		@keyframes anim {
+			0% {
+				transform: rotateY(-20deg) rotatex(10deg);
+			}
+
+			50% {
+				transform: rotateY(-10deg) rotatex(15deg);
+			}
+
+			100% {
+				transform: rotateY(-20deg) rotatex(10deg);
+			}
+		}
+
+		@-webkit-keyframes anim {
+			0% {
+				transform: rotateY(-20deg) rotatex(10deg);
+			}
+
+			50% {
+				transform: rotateY(-10deg) rotatex(15deg);
+			}
+
+			100% {
+				transform: rotateY(-20deg) rotatex(10deg);
+			}
+		}
+	</style>
 </head>
+
+
 <body>
-    <div class="box"></div>
-    <div class="text">小金老师，万事顺遂，Be Happy!</div>
+
+	<div class="container" onselectstart="return false;" unselectable="on" style="-moz-user-select:none;">
+
+		<div class="body_left">
+			<img src="images/biubiubiu.gif" alt="" ondragstart='return false;'>
+		</div>
+
+		<div class="body_center love">
+			<div class="block" id="rot">
+				<div class="box"></div>
+				<div><span class="yellow">To My Jin:</span> <span class="fff"></span> <br />
+					<p>
+						<span class="violet">万事顺遂<span class="fff"></span>
+							<span class="red">天天开心!</span>
+							<span class="green"> <br />
+					</p>
+
+					<span class="green">--From Your Boy</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/love.js"></script>
+
 </body>
+
 </html>
