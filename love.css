@@ -50,6 +50,8 @@ body {
     right: 0;
     position: absolute;
     visibility: hidden; 
+	position: fixed;
+    top: 30%;
 		/* 未开始升空动画前隐藏 */
 }
 
