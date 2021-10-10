@@ -47,8 +47,8 @@ body {
 }
 
 .love .block {
-    right: 40%;
-	top:30%;
+    right: 10%;
+	top:20%;
     position: fixed;
     visibility: hidden; 
 		/* 未开始升空动画前隐藏 */
