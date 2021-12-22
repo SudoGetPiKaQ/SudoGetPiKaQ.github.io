@@ -334,16 +334,20 @@ const allColors = [BLUE, GREEN, PINK, ORANGE];
 
 // Gameplay
 const getSpawnDelay = () => {
-	const spawnDelayMax = 1400;
-	const spawnDelayMin = 550;
+	const spawnDelayMax = 100;
+	const spawnDelayMin = 150;
 	const spawnDelay = spawnDelayMax - state.game.cubeCount * 3.1;
 	return Math.max(spawnDelay, spawnDelayMin);
 }
 const doubleStrongEnableScore = 2000;
 // Number of cubes that must be smashed before activating a feature.
-const slowmoThreshold = 10;
-const strongThreshold = 25;
-const spinnerThreshold = 25;
+// const slowmoThreshold = 10;
+// const strongThreshold = 25;
+// const spinnerThreshold = 25;
+
+const slowmoThreshold = 1;
+const strongThreshold = 1;
+const spinnerThreshold = 1;
 
 // Interaction state
 let pointerIsDown = false;
@@ -352,15 +356,15 @@ let pointerScreen = { x: 0, y: 0 };
 // Same as `pointerScreen`, but converted to scene coordinates in rAF.
 let pointerScene = { x: 0, y: 0 };
 // Minimum speed of pointer before "hits" are counted.
-const minPointerSpeed = 60;
+const minPointerSpeed = 30;
 // The hit speed affects the direction the target post-hit. This number dampens that force.
 const hitDampening = 0.1;
 // Backboard receives shadows and is the farthest negative Z position of entities.
 const backboardZ = -400;
 const shadowColor = '#262e36';
 // How much air drag is applied to standard objects
-const airDrag = 0.022;
-const gravity = 0.3;
+const airDrag = 0.002;
+const gravity = 0.2;
 // Spark config
 const sparkColor = 'rgba(170,221,255,.9)';
 const sparkThickness = 2.2;
@@ -371,8 +375,8 @@ const touchTrailThickness = 7;
 const touchPointLife = 120;
 const touchPoints = [];
 // Size of in-game targets. This affects rendered size and hit area.
-const targetRadius = 40;
-const targetHitRadius = 50;
+const targetRadius = 20;
+const targetHitRadius = 30;
 const makeTargetGlueColor = target => {
 	// const alpha = (target.health - 1) / (target.maxHealth - 1);
 	// return `rgba(170,221,255,${alpha.toFixed(3)})`;
